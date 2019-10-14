@@ -1,0 +1,57 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PASSENGER-DETAILS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/styles/index.css">
+<script type="text/javascript" src="/js/passengerdetail.js"></script>
+
+<style>
+td, th {
+	width: 10%;
+}
+</style>
+
+
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="login"><img src="/images/logo.png"></a>
+			</div>
+			<ul>
+
+				<li><a href="contactus">Contact us</a></li>
+
+
+				<li><a href="gallary">Gallery</a></li>
+
+				<li><a href="logout">LOGOUT</a></li>
+			</ul>
+		</div>
+
+	</header>
+	<div class="content">
+		<hr>
+		<form method="post" action="payment"  th:object="${passenger}" > 
+		<h2 align=center>Passengers Details</h2>
+			<table border=1>
+	 			<tr th:each="i : ${#numbers.sequence( 1, seats,1)}">
+					<td>Passenger</td>
+					<td th:text="${i}"></td>
+					<td><input type="text" id="clientName" name="passengerName" th:field="${passenger.passengerName}"  required/></td>
+				</tr>
+				
+			</table>
+			<table align=left style="float: left">
+		
+				<tr>
+					<td >
+					<input type=submit value="Continue"   style="background-color: green;padding:8px 8px;font-size:16px;color:white;margin:4px 2px" /></td>
+				    </tr>
+		</form>
+	</div>
+
+</body>
+</html>

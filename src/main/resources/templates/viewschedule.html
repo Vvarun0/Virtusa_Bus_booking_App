@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>BUS RESERVATION SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+	<header>
+		<div class="main">
+			<ul>
+				<li><a href="adminhome">HOME</a></li>
+				<li><a href="addadmin">ADD ADMIN</a></li>
+				<li><a href="addservice">ADD SERVICE</a></li>
+				<li><a href="modifyservice">MODIFY SERVICE</a></li>
+				<li><a href="viewfeedback">VIEW FEEDBACKS</a></li>
+				<li class="active"><a href="viewschedule">SCHEDULES</a></li>
+				<li><a href="logoutadmin">LOGOUT</a></li>
+			</ul>
+		</div>
+		
+	</header>
+	<div class="s1">
+	<form align="center">
+		<table border=1>
+		<tr><th>SERVICE ID</th><th>SOURCE</th><th>DESTINATION</th><th>JOURNEY TIME</th><th>DEPARTURE TIME</th><th>ADMIN ID</th></tr>
+		<tr th:each="schedule : ${schedules}">
+		<td th:text="${schedule.serviceId}"> </td>
+		<td th:text="${schedule.route.source.cityName}"> </td>
+		<td th:text="${schedule.route.destination.cityName}"> </td>
+		<td th:text="${schedule.journeyTime}"> </td>
+		<td th:text="${schedule.departureTime}"> </td>
+		<td th:text="${schedule.user.email}"> </td>
+		</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>

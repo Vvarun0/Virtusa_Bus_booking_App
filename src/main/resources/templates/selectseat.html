@@ -1,0 +1,59 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>BUS RESERVATION SYSTEM</title>
+<meta name="viewport" content="width=device-width,  initial-scale=1" />
+<link rel="stylesheet" href="/styles/index.css">
+
+</head>
+<body>
+	<header>
+		<div class="main">
+		<div class="logo">
+		<a href="login"><img src="/images/logo.png"></a>
+		</div>
+			<ul>
+				
+				
+				
+				<li><a href="logout">LOGOUT</a></li>
+			</ul>
+		</div>
+		
+	</header>
+	<div class="s2">
+	<form method=post th:action="@{passengerdetail}">
+		<div class="s3">
+		
+	</div>
+	
+		<div class="s4" th:with="someVariable=${40}">
+				<div th:if="${message!=null}">
+					<div th:text="*{message}"></div>
+				</div>
+				<h2 align=center>Select Seats</h2><br><br>
+			
+							<table>
+							<tr><td>Booking ID</td><td><input type="number" id="bookingId" name="bookingId" th:value="${bookingid}" readonly /></td></tr>
+							<tr><td>Fare</td><td><input type="number" id="fare" name="fare" readonly th:value="${fare}" /></td></tr>
+							<tr><td>Date Of Journey</td><td><input type="date" id="doj" name="doj" readonly th:value="${doj}" /></td></tr>
+							<tr><td>Seat Numbers</td><td><input type="text" id="seatNumbers" name="seatNumbers" readonly th:value="${seatNumbers}" /></td></tr>
+							
+							</table>
+			
+			<table align=left style="float: left">
+		
+				<tr>
+					<td colspan=2 align=center><br><br>
+					<input type=submit value="Continue"   style="background-color: green;padding:8px 8px;font-size:16px;color:white;margin:4px 2px" /></td>
+					<td align=center><a href="#"><br><br><input type=button
+							value="Back" style="background-color: red;padding:8px 8px;font-size:16px;color:white;margin:4px 2px" /></a></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	</div>
+	
+	
+</body>
+</html>
+

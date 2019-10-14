@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUS RESERVATION SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/index.css"></head>
+<body>
+<header>
+		<div class="main">
+			<ul>
+				<li><a href="adminhome">HOME</a></li>
+				<li class="active"><a href="addadmin">ADD ADMIN</a></li>
+				<li><a href="addservice">ADD SERVICE</a></li>
+				<li><a href="modifyservice">MODIFY SERVICE</a></li>
+				<li><a href="viewfeedback">VIEW FEEDBACKS</a></li>
+				<li><a href="viewschedule">SCHEDULES</a></li>
+				<li><a href="logoutadmin">LOGOUT</a></li>
+			</ul>
+		</div>
+		</header>
+
+<div class="newadd" align="center">
+<div th:if="${message!=null}">
+<div th:text="*{message}"></div>
+</div>
+
+<form action="addnewadmin"  method="post" autocomplete="off">
+    <h1>Add Admin</h1>
+     <div class="txtb">
+    <label for="Name"><b>Admin Name</b></label>
+    <input type="text" placeholder="Enter Name" name="userName" required>
+    </div>
+     <div class="txtb">
+    <label for="Name"><b>Email</b></label>
+    <input type="email" placeholder="Enter Name" name="email" required>
+    </div>
+    <div class="txtb">
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    </div>
+    <!-- <div class="txtb">
+    <label for="psw"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Enter Password" name="cpass" required>
+    </div> -->
+    <!-- <div class="txtb">
+    <label for ="sec" ><b>Security question</b></label>
+    <select name="seq">
+   <option value="null" class="drop_down">select</option>     
+  <option value="petname">pet name</option>
+  <option value="birthday">birthday</option>
+   </select>
+   </div>
+    <div class="txtb">
+    <label for="ans"><b>Answer</b></label>
+    <input type="text" placeholder="ans" name="ans" required>
+    </div> --> 
+    <button type="submit" class="btn">Register</button>
+  </form>
+</div>
+</body>
+</html>
+

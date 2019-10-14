@@ -1,0 +1,253 @@
+@charset "ISO-8859-1";
+ *{
+	margin:0;
+	padding:0;
+    font-family: Century Gothic;
+}
+ header{
+ background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("/images/5.jpg");
+ height:100vh;
+  background-repeat:no-repeat;
+ background-size:1800px 900px;
+ background_position:center;
+
+ }
+ ul{
+ 
+ float:right;
+ list-style-type:none;
+ margin-top:30px;
+margin-right:40px;
+ }
+ ul li{
+ display:inline-block;
+ padding:5px;
+ 
+ }
+ ul li a{
+ text-decoration:none;
+ color:#fff;
+ padding:15px 20px;
+ border: 1px solid transparent ; 
+ transition:0.6s ease;
+ }
+ ul li a:hover{
+ background-color:#fff;
+ color:black;
+ }
+ ul li.active a{
+  background-color: #fff;
+  color:#000; 
+ 
+ }
+ .logo img{
+ margin-top:25px;
+ margin-left:40px;
+ float:left;
+ width:150opx;
+ height: 100px;
+ }
+.main
+ {max-height:1200px;
+  marign:auto;
+ }
+.main h3{
+ position:absolute;
+ top:35%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ color:white;
+ font-size:26px;	
+}
+
+.txtb{
+border:1px solid gray;
+margin:8px 0;
+padding: 12px 18px;
+border-radius: 8px;
+}
+.sermod table{
+	align="center";
+    width:150%;
+   
+}
+.txtb label{
+	display:block;
+	text-align:left;
+	color:black;
+	text-transform:uppercase;
+	font-size:14px;
+}
+.txtb input,.txtb textarea,.sermod table tr{
+	width:100%;
+	border:none;
+	background: none;
+	font-size: 18px;
+	margin-top:6px;	
+}
+.txtb select{width:100%;
+	border:1;
+	background: border-box;
+	font-size: 18px;
+	margin-top:6px;
+	
+}
+.sermod table td select{
+	
+	background: border-box;
+	font-size: 18px;
+	margin-top:6px;
+}
+.sermod table tr td {
+	width:5px;
+}
+.s4{
+	max-width:500px;
+	
+}
+.s3{
+	max-width:500px;
+	margin-left:0px;
+	
+}
+.s2,.s1{
+	filter: alpha(opacity=90);
+	width:50%;
+	max-width: 500px;
+	background: #f1f1f1;
+	position: absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding:30px 40px;
+	border-radius: 8px;
+	text-align:center;
+	box-shadow: 0 0 20px #000000b3; 
+	font-family:"Montserrat",sans serif;
+}
+.contact-form, .ad-login, .newadd,.viewfeed{
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	width:85%;
+	max-width: 600px;
+	background: #f1f1f1;
+	position: absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding:30px 40px;
+	border-radius: 8px;
+	text-align:center;
+	box-shadow: 0 0 20px #000000b3; 
+	font-family:"Montserrat",sans serif;
+
+}
+.content,.n1,.n2{
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+ 	width:85%;
+	max-width: 65%; 
+	background: #f1f1f1;
+	position: absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding:30px 40px;
+	border-radius: 8px;
+	text-align:center;
+	box-shadow: 0 0 20px #000000b3; 
+	font-family:"Montserrat",sans serif;
+}
+.n3 h2 table td tr th{
+	left:90%;
+	float:right;
+	margin-left:220%;
+	/*position:absolute;*/
+}
+/* edited for table   */
+#abcd td tr{
+	width:auto;
+	marign:40px;
+}
+
+.contact-form h1{
+	text-transform:uppercase;
+	margin-top:0;
+	fornt-weight:200;
+		
+}
+
+.btn{
+	display:inline-block;
+	background:maroon;
+	padding:14px 0;
+	color:white;
+	text-transform:uppercase;
+	cursor:pointer;
+	margin-top:8px;
+	width:100%;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn button{
+	color:red;
+}
+
+.service,.bg{
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	
+	max-width: 415px;
+	background: #f1f1f1;
+	position: absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding:30px 40px;
+	border-radius: 8px;
+	text-align:center;
+	box-shadow: 0 0 20px #000000b3; 
+	font-family:"Montserrat",sans serif;
+
+}
+.ad-login h1{
+	text-transform:uppercase;
+	margin-top:0;
+	font-weight:200;
+		
+}
+
+  
+ .title{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ 
+ }
+ .title{
+ color:white;
+ font-size:46px;
+ }
+ .sel{
+position:absolute;
+top:60%;
+left:50%;
+transform:translate(-50%,-50%);
+ } 
+ 
+ .sel h2 a , h2 a{
+ color:white;
+ font-size:26px;
+ }
+input[type=text],input[type=number],input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

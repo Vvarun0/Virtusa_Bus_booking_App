@@ -1,0 +1,49 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+	<header>
+		<div class="main">
+		<div class="logo">
+		<a href="index.html"><img th:src="@{/images/logo.png}"></a>
+		</div>
+			<ul>
+				<li><a href="bookticket">BookTickeT</a>
+				<li><a href="contactus">Contact us</a></li>
+				<li><a href="feedback">Feedback</a></li>
+				<li><a href="gallary">Gallery</a></li>
+				<li><a href="viewscheduleuser">Schedules</a></li>
+				<li><a href="logout">LOGOUT</a></li>
+			</ul>
+		</div>
+		
+	</header>
+	<div class="bg">
+	<form method="post" action="selectseat">
+	<table>
+	<h2 align=center>BUS SERVICE SELECTION</h2>
+	<tr>
+	<th>COMPANY NAME</th><br>
+					<td><select name="trip">
+							<option th:each="source : ${sources}" th:text="${source}">
+
+							</option>
+
+					</select></td>
+				</tr>
+	
+	<br>
+	<tr>
+	<td colspan="2"><input type="submit" value="Submit" style="background-color: green; padding:8px 8px;font-size:16px;color:white;margin:4px 2px"></td>
+					<td><input type="reset" value="Reset" style="background-color: red; padding:8px 8px;font-size:16px;color:white;margin:4px 2px"></td>
+	</tr>
+	</table>
+	</form>
+	</div>
+</body>
+
+</html>

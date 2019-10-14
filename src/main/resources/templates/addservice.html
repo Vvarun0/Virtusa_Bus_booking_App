@@ -1,0 +1,91 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUS RESERVATION SYSTEM</title>
+<link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<header>
+		<div class="main">
+		
+			<ul>
+				<li><a href="adminhome">HOME</a></li>
+				<li><a href="addadmin">ADD ADMIN</a></li>
+				<li class="active"><a href="addservice">ADD SERVICE</a></li>
+				<li><a href="modifyservice">MODIFY SERVICE</a></li>
+				<li><a href="viewfeedback">VIEW FEEDBACKS</a></li>
+				<li><a href="viewschedule">SCHEDULES</a></li>
+				<li><a href="logoutadmin">LOGOUT</a></li>
+			</ul>
+		</div>
+</header>
+
+
+<div class="service" align = center >
+<div th:if="${message!=null}">
+<div th:text="*{message}"></div>
+</div>
+<form method=post action="addNewservice">
+
+<fieldset >
+<legend><h2 align=center>Add A Service</h2>
+</legend>
+<table align=center cellpadding=8 cellspacing=8>
+<tr><td>TRIP</td>
+<td><select name="trip">
+<option th:each="source : ${sources}" 
+     th:text="${source}">
+
+</option>
+
+</select></td>
+</tr>
+
+
+<tr>
+
+<tr>
+<td>Departure Time(hrs)</td>
+<td><input type=text title="Departure Time" id='dtime' name="departureTime" required></td>
+</tr>
+
+<tr>
+
+<td>Journey Time(hrs)</td>
+<td><input type=text  title="Journey Time" id='jtime' name="journeyTime"  required></td>
+
+</tr>
+
+<tr>
+
+<td>Service no</td>
+<td><input type=text title="Service no" id='sno' name="serviceId"  required></td>
+
+</tr>
+<tr>
+
+<td></td>
+<td><input type=text value="v@v.com" name="email" hidden></td>
+
+</tr>
+<tr>
+<td colspan="2" align="center">
+<br><br>
+<input type=submit value="submit" title="Confirm Details" style="background-color:green;
+color:white;
+padding:15 32;
+text-align:center;
+display:inline-block;
+font-size:16;" />
+</td>
+<td>
+<br><br>
+
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
+

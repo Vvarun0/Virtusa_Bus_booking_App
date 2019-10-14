@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>BUS RESERVATION SYSTEM</title>
+<link rel="stylesheet" href="/styles/index.css">
+<!-- <script type="text/javascript" th:src="@{//js/bookticket.js}"  ></script> -->
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="book"><img th:src="@{/images/logo.png}"></a>
+			</div>
+			<ul>
+				<li class="active"><a href="bookticket">BookTicket</a>
+				<li><a href="contactus">Contact us</a></li>
+				<li><a href="feedback">Feedback</a></li>
+				<li><a href="gallary">Gallery</a></li>
+				<li><a href="viewscheduleuser">Schedules</a></li>
+				<li><a href="logout">LOGOUT</a></li>
+			</ul>
+		</div>
+
+	</header>
+	<div class="bg">
+		<form method="post" action="details">
+			<table>
+				<h2 align=center>BOOK TICKET</h2><br/>
+				
+				<tr>
+					<td>Trip</td>
+					<td><select name="trip">
+							<option th:each="source : ${sources}" th:text="${source}">
+
+							</option>
+
+					</select></td>
+				</tr>
+				<tr>
+					<td>DATE OF JOURNEY</td>
+					<td><input type="date" id="dateOfJourney" name="dateOfJourney" ></td> <!-- goes to bookticket.js -->
+				</tr>
+				<tr>
+					<td>NO OF PASSENGERS</td>
+					<td><input type="number" name="noOfPassengers" min=1 max=6></td>
+				</tr>
+				<tr>
+					<td align=center><input type="submit" value="Submit" style="background-color: green; padding:8px 8px;font-size:16px;color:white;margin:4px 2px"></td>
+					<td align=center><input type="reset" value="Reset" style="background-color: red; padding:8px 8px;font-size:16px;color:white;margin:4px 2px"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

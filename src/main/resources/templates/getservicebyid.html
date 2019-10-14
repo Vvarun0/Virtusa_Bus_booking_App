@@ -1,0 +1,85 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUS RESERVATION SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<!-- <script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="scripts/modifyservice.js"></script>
+<link rel="stylesheet" type="text/css" href="/styles/index.css">
+</head>
+<body>
+<header>
+		<div class="main">
+		
+			<ul>
+				<li><a href="adminhome">HOME</a></li>
+				<li><a href="addadmin">ADD ADMIN</a></li>
+				<li><a href="addservice">ADD SERVICE</a></li>
+				<li class="active"><a href="modifyservice">MODIFY SERVICE</a></li>
+				<li><a href="viewfeedback">VIEW FEEDBACKS</a></li>
+				<li><a href="viewschedule">SCHEDULES</a></li>
+				<li><a href="logoutadmin">LOGOUT</a></li>
+			</ul>
+		</div>
+</header>
+<div class="s1" align="center">
+
+
+ <!-- <form action="modiifyserviceaction.jsp" method="get"> -->
+
+ <h1 align=center >Service Modification</h1> 
+ <fieldset align="center" style="margin-left:15%;width:65%" class="fee" >
+ <div class="sermod" style="margin-left:0%;width:65%" >
+
+<form id="search-form"  method="post" action="modifyOldservice">
+
+<table align="center" border="0" cellspacing="0" cellpadding="1">
+  <tbody>
+    <tr >
+      <!-- <td th:text="*{services}">Oranges</td> -->
+      
+      <!-- <td th:text="*{service.getDepartureTime}">Oranges</td>
+      <td th:text="*{service.journeyTime}">Oranges</td>
+      <td th:text="*{service.user.emailId}">Oranges</td> -->
+      
+    </tr>
+    <tr>
+    <td>Service Id</td>
+    <td><input type=text name="serviceId" id="serviceId" readonly ></td>
+    </tr>
+    <tr>
+    <td>Departure Time</td>
+    <td><input type=text name="departureTime" id="departureTime"></td>
+    </tr>
+    <tr>
+    <td>Journey Time</td>
+    <td><input type="number" name="journeyTime" id="journeyTime"></td>
+    </tr>
+    <tr>
+    <td>Route Id</td>
+    <td><input type="number" name="routeId" id="routeId" readonly ></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</fieldset>
+</div>
+<script th:inline="javascript">
+/*<![CDATA[*/
+
+    var message = /*[[${services}]]*/ 'default';
+    console.log(message);
+    document.getElementById("serviceId").value = message[2];
+    document.getElementById("departureTime").value = message[0];
+    document.getElementById("journeyTime").value = message[1];
+    document.getElementById("routeId").value = message[3];
+
+/*]]>*/
+</script>
+</body>
+</html>

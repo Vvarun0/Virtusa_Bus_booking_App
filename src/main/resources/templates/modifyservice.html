@@ -1,0 +1,70 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUS RESERVATION SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<!-- <script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="scripts/modifyservice.js"></script>
+<link rel="stylesheet" type="text/css" href="/styles/index.css">
+</head>
+<body>
+<header>
+		<div class="main">
+		
+			<ul>
+				<li><a href="adminhome">HOME</a></li>
+				<li><a href="addadmin">ADD ADMIN</a></li>
+				<li><a href="addservice">ADD SERVICE</a></li>
+				<li><a href="modifyservice">MODIFY SERVICE</a></li>
+				<li><a href="viewfeedback">VIEW FEEDBACKS</a></li>
+				<li><a href="viewschedule">SCHEDULES</a></li>
+				<li><a href="logoutadmin">LOGOUT</a></li>
+			</ul>
+		</div>
+</header>
+<div class="s1" align="center">
+
+
+ <!-- <form action="modiifyserviceaction.jsp" method="get"> -->
+
+ <h1 align=center >Service Modification</h1> 
+ <fieldset align="center" style="margin-left:15%;width:65%" class="fee" >
+ <div class="sermod" style="margin-left:0%;width:65%" >
+
+<div th:if="${message!=null}">
+<div th:text="*{message}"></div>
+</div>
+<form id="search-form"  method="post" action="getservicebyid">
+
+<table align="center" border="0" cellspacing="0" cellpadding="1">
+<tr>
+<td style='float:center;text-align:center'>Service Number</td>
+<td>
+<select name="serviceId" id="search-form">
+<option th:each="service : ${services}" th:text="${service.serviceId}">
+</option>
+
+</select>
+<!-- <select name=service id="service"> -->
+<!-- <option value='select service'>select-service</option> -->
+
+<tr><td colspan="2" align="center"><input type="submit"  value="Submit" id="search-form"></a><!-- <input type="reset" value="Cancel/Reset"> --></td></tr>
+
+
+</table>
+<div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10"> 
+             <table id="feedback" class="table">
+             
+             </table>
+             </div>
+             </div>
+             </form>
+             
+</div>
+</fieldset>
+</div>
+</body>
+</html>

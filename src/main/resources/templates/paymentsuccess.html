@@ -1,0 +1,77 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/styles/index.css">
+<style>
+td, th {
+	width: 100%;
+}
+</style>
+
+
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="login"><img src="/images/logo.png"></a>
+			</div>
+			<ul>
+
+				<li><a href="contactus">Contact us</a></li>
+
+
+				<li><a href="gallary">Gallery</a></li>
+
+				<li><a href="logout">LOGOUT</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="content">
+		<hr>
+		<h1>PAYMENT SUCCESS</h1>
+		<h4>YOUR TICKET DETAILS</h4>
+		<div>
+		<form>
+				<table th:each="source : ${passengerdetails}" >
+					<tr>
+						<td>No Of Passengers</td>
+						<td><input type=text name="trip" th:value="${source.booking.noOfPassengers}"></td>
+					</tr>
+					<tr>
+						<td>Date Of Journey</td>
+						<td><input type=text name="trip" th:value="${source.booking.dateOfJourney}"></td>
+					</tr>
+					<tr>
+						<td>Booking Id</td>
+						<td><input type=text name="trip" th:value="${source.booking.bookingId}"></td>
+					</tr>
+					<tr>
+						<td>Total fare</td>
+						<td><input type=text name="trip" th:value="${source.booking.fare}"></td>
+					</tr>
+					<tr>
+						<td>Departure Time</td>
+						<td><input type=text name="trip" th:value="${source.booking.service.departureTime}"></td>
+					</tr>
+					<tr>
+						<td>Journey Time</td>
+						<td><input type=text name="trip" th:value="${source.booking.service.journeyTime}"></td>
+					</tr>
+					<tr>
+						<td>Source</td>
+						<td><input type=text name="trip" th:value="${source.booking.service.route.source.cityName}"></td>
+					</tr>
+					<tr>
+						<td>Destination</td>
+						<td><input type=text name="trip" th:value="${source.booking.service.route.destination.cityName}"></td>
+					</tr>
+				</table>
+			</form> 
+		</div>
+		<h4>THANK YOU</h4>
+	</div>
+
+</body>
+</html>
